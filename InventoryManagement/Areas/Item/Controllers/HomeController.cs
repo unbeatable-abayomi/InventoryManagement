@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using InventoryManagement.Models;
 
-namespace InventoryManagement.Controllers
+namespace InventoryManagement.Areas.Item.Controllers
 {
+	[Area("Item")]
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
