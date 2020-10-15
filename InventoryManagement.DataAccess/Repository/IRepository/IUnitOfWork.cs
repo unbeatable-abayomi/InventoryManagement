@@ -8,7 +8,7 @@ namespace InventoryManagement.DataAccess.Repository.IRepository
 {
     public interface IUnitOfWork : IDisposable
     {
-        IItemRepository Item { get; }
+        IStockItemRepository StockItem { get; }
         IWareHouseRepository WareHouse { get; }
         IEmployeeRepository Employee { get; }
 

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement.DataAccess.Repository.IRepository
 {
-    public interface IItemRepository : IRepository<Item>
+    public interface IStockItemRepository : IRepository<StockItem>
     {
-        void Update(Item item);
+        void Update(StockItem item);
     }
 }

@@ -15,13 +15,13 @@ namespace InventoryManagement.DataAccess.Repository
 		public UnitOfWork(ApplicationDbContext db)
 		{
             _db = db;
-			Item = new ItemRepository(_db);
+			StockItem = new StockItemRepository(_db);
 			WareHouse = new WareHouseRepository(_db);
 			Employee = new EmployeeRepository(_db);
 
 		}
 
-		public IItemRepository Item { get; private set; }
+		public IStockItemRepository StockItem { get; private set; }
 		public IWareHouseRepository WareHouse { get; private set; }
 		public IEmployeeRepository Employee { get; private set; }
 

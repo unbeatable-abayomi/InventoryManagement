@@ -15,7 +15,7 @@ namespace InventoryManagement.Data
 		}
 
 
-		public DbSet<Item> Items { get; set; }
+		public DbSet<StockItem> StockItems { get; set; }
 		public DbSet<WareHouse> WareHouses { get; set; }
 		public DbSet<Employee> Employees { get; set; }
 	}

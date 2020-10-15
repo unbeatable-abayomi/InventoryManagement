@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement.DataAccess.Repository
 {
-    public class ItemRepository : Repository<Item>, IItemRepository
+    public class StockItemRepository : Repository<StockItem>, IStockItemRepository
 	{
 		private readonly ApplicationDbContext _db;
-		public ItemRepository(ApplicationDbContext db): base(db)
+		public StockItemRepository(ApplicationDbContext db): base(db)
 		{
 			_db = db;
 		}
 
-		public void Update(Item item)
+		public void Update(StockItem item)
 		{
-			var objFromDb = _db.Items.FirstOrDefault(i => i.Id == item.Id);
+			var objFromDb = _db.StockItems.FirstOrDefault(i => i.Id == item.Id);
 
 			if (objFromDb != null)
 			{

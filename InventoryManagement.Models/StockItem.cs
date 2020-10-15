@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement.Models
 {
-    public class Item
+    public class StockItem
     {
 
         [Key]
