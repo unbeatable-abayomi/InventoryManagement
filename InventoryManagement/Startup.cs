@@ -12,6 +12,8 @@ using InventoryManagement.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using InventoryManagement.DataAccess.Repository.IRepository;
+using InventoryManagement.DataAccess.Repository;
 
 namespace InventoryManagement
 {
@@ -32,6 +34,7 @@ namespace InventoryManagement
 					Configuration.GetConnectionString("DefaultConnection")));
 			services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 				.AddEntityFrameworkStores<ApplicationDbContext>();
+			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.AddControllersWithViews();
 			services.AddRazorPages();
 		}

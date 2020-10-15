@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement.DataAccess.Repository
 {
-    public class WareHouseRepository : Repository<WareHouse>, IWareHouseRepository
-    {
+	public class WareHouseRepository : Repository<WareHouse>, IWareHouseRepository
+	{
 		private readonly ApplicationDbContext _db;
 		public WareHouseRepository(ApplicationDbContext db): base(db)
 		{
