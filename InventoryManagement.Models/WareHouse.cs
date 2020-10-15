@@ -11,6 +11,7 @@ namespace InventoryManagement.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "WareHouse Name")]
         [Required]
         public string Title { get; set; }
 
