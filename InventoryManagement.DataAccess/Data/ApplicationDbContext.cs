@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using InventoryManagement.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,5 +13,10 @@ namespace InventoryManagement.Data
 			: base(options)
 		{
 		}
+
+
+		public DbSet<Item> Items { get; set; }
+		public DbSet<WareHouse> WareHouses { get; set; }
+		public DbSet<Employee> Employees { get; set; }
 	}
 }
