@@ -12,6 +12,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
   </ItemGroup>
 
 
@@ -19,6 +21,12 @@
     <ProjectReference Include="..\InventoryManagement.Models\InventoryManagement.Models.csproj" />
     <ProjectReference Include="..\InventoryManagement.Utility\InventoryManagement.Utility.csproj" />
     <ProjectReference Include="..\InventoryManagement.DataAccess\InventoryManagement.DataAccess.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Areas\Item\Controllers\" />
+    <Folder Include="Areas\Item\Views\" />
   </ItemGroup>
 
 </Project>
