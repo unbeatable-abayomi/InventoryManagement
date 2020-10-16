@@ -7,6 +7,7 @@ using InventoryManagement.DataAccess.Repository.IRepository;
 using InventoryManagement.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace InventoryManagement.Areas.Admin.Controllers
 {
@@ -35,7 +36,7 @@ namespace InventoryManagement.Areas.Admin.Controllers
 
 		[HttpGet]
 		public IActionResult Upsert(int? id)
-		{
+		{ ViewBag.Gender = new SelectList(new List<string>() { "Male", "Female", "Prefer Not to Say" });
 			Employee employee = new Employee();
 
 			if (id == null)
@@ -56,6 +57,7 @@ namespace InventoryManagement.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public IActionResult Upsert(Employee employee)
 		{
+			 ViewBag.Gender = new SelectList(new List<string>() { "Male", "Female", "Prefer Not to Say" });
 			if (ModelState.IsValid)
 			{
 				string webRootPath = _hostEnvironment.WebRootPath;

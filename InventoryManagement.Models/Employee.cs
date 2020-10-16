@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement.Models
 {
-    public enum Gender
-	{
-		
-		Male,
-		Female
-	}
+ 
     public class Employee
     {
 
@@ -29,8 +24,14 @@ namespace InventoryManagement.Models
 		public int Age { get; set; }
 		[Required]
 		public string PhoneNumber { get; set; }
-		public Gender Gender { get; set; }
+	
 
 		public string ImageUrl { get; set; }
+
+		public string Sex { get; set; }
 	}
+
+
+
+	
 }

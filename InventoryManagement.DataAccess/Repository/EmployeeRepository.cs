@@ -29,7 +29,7 @@ namespace InventoryManagement.DataAccess.Repository
 				};
 				objFromDb.Name = employee.Name;
 				objFromDb.Age = employee.Age;
-				objFromDb.Gender = employee.Gender;
+				objFromDb.Sex = employee.Sex;
 				objFromDb.IdentityCardNumber = employee.IdentityCardNumber;
 				objFromDb.PhoneNumber = employee.PhoneNumber;
 				

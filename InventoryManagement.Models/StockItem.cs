@@ -27,7 +27,7 @@ namespace InventoryManagement.Models
         public double Price { get; set; }
         [Display(Name = "Count Of Items To Stocked")]
         [Required]
-        [MaxLength(50)]
+       // [MaxLength(50)]
         public int Count { get; set; }
         public string ImageUrl { get; set; }
 
