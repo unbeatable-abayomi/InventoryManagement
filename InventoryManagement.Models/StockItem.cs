@@ -31,6 +31,9 @@ namespace InventoryManagement.Models
         public int Count { get; set; }
         public string ImageUrl { get; set; }
 
+
+        public DateTime Created { get; set; } = DateTime.Now;
+        
         [Display(Name = "What Warehouse are you Choosing to Stock Items?")]
         [Required]
         public int WareHouseId { get; set; }
