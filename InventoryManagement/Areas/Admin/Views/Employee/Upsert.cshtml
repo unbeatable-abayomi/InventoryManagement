@@ -45,24 +45,28 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label asp-for="Sex"></label>
-				<select asp-for="Sex" class="form-control" asp-items="ViewBag.Gender">
-					<option value="">Please Select Gender</option>
-
-				</select>
-				<span asp-validation-for="Sex" class="text-danger"></span>
-			</div>
-
-			<div class="form-group row">
 				<div class="col-4">
-					<label asp-for="PhoneNumber"></label>
+					<label asp-for="Sex"></label>
 				</div>
 				<div class="col-8">
-					<input asp-for="PhoneNumber" class="form-control" />
-					<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+					<select asp-for="Sex" class="form-control" asp-items="ViewBag.Gender">
+						<option value="">Please Select Gender</option>
+
+					</select>
+					<span asp-validation-for="Sex" class="text-danger"></span>
 				</div>
-			</div>
-			@*<div class="form-group row">
+				</div>
+
+				<div class="form-group row">
+					<div class="col-4">
+						<label asp-for="PhoneNumber"></label>
+					</div>
+					<div class="col-8">
+						<input asp-for="PhoneNumber" class="form-control" />
+						<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+					</div>
+				</div>
+				@*<div class="form-group row">
 			<div class="col-4">
 				<label asp-for="StockItem.Description"></label>
 			</div>
@@ -76,7 +80,7 @@
 
 			<span asp-validation-for="StockItem.Created" class="text-danger"></span>
 		</div>*@
-			@*<div class="form-group row">
+				@*<div class="form-group row">
 			<div class="col-4">
 				<label asp-for="Product.ListPrice"></label>
 			</div>
@@ -112,7 +116,7 @@
 				<span asp-validation-for="Product.Price100" class="text-danger"></span>
 			</div>
 		</div>*@
-			@*<div class="form-group row">
+				@*<div class="form-group row">
 			<div class="col-4">
 				Category
 			</div>
@@ -132,34 +136,34 @@
 				<span asp-validation-for="StockItem.EmployeeId" class="text-danger"></span>
 			</div>
 		</div>*@
-			<div class="form-group row">
-				<div class="col-4">
-					Image
+				<div class="form-group row">
+					<div class="col-4">
+						Image
+					</div>
+					<div class="col-8">
+						<input type="file" name="files" id="uploadBox" multiple class="form-control" />
+					</div>
 				</div>
-				<div class="col-8">
-					<input type="file" name="files" id="uploadBox" multiple class="form-control" />
+				<div class="form-group row">
+					<div class="col-8 offset-4">
+						@if (Model.Id != 0)
+						{
+							<partial name="_EditAndBackToListButton" model="Model.Id" />
+						}
+						else
+						{
+							<div class="row">
+								<div class="col">
+									<button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Create</button>
+								</div>
+								<div class="col">
+									<a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+								</div>
+							</div>
+						}
+					</div>
 				</div>
 			</div>
-			<div class="form-group row">
-				<div class="col-8 offset-4">
-					@if (Model.Id != 0)
-					{
-						<partial name="_EditAndBackToListButton" model="Model.Id" />
-					}
-					else
-					{
-						<div class="row">
-							<div class="col">
-								<button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Create</button>
-							</div>
-							<div class="col">
-								<a asp-action="Index" class="btn btn-success form-control">Back to List</a>
-							</div>
-						</div>
-					}
-				</div>
-			</div>
-		</div>
 		@if (Model.Id != 0)
 		{
 			<div class="col-3 offset-1 pt-4">

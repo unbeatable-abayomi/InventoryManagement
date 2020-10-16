@@ -15,8 +15,9 @@ function loadDataTable() {
 		"columns": [
 			{ "data": "name", "width": "15%" },
 			{ "data": "description", "width": "10%" },
-			{ "data": "price", "width": "10%" },
-			{ "data": "count", "width": "15%" },
+			{ "data": "price", "width": "5%" },
+			{ "data": "count", "width": "5%" },
+			{ "data": "dateCreated", "width": "10%" },
 			{ "data": "wareHouse.title", "width": "15%" },
 			{ "data": "employee.name", "width": "15%" },
 			{
@@ -32,7 +33,7 @@ function loadDataTable() {
 								</a>
 							</div>
 						   `;
-				}, "width": "35%"
+				}, "width": "25%"
 			}
 		]
 	});

@@ -32,7 +32,7 @@ namespace InventoryManagement.DataAccess.Repository
 				objFromDb.WareHouseId = item.WareHouseId;
 				objFromDb.EmployeeId = item.EmployeeId;
 				objFromDb.Description = item.Description;
-				objFromDb.Created = item.Created;
+				objFromDb.DateCreated = item.DateCreated;
 				objFromDb.Count = item.Count;
 
 
