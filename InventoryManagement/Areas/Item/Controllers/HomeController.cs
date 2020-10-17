@@ -36,6 +36,36 @@ namespace InventoryManagement.Areas.Item.Controllers
 			var stockItem = _unitOfWork.StockItem.GetFirstOrDefault(u => u.Id == id, includeProperties: "Employee,WareHouse");
 			return View(stockItem);
 		}
+
+		public IActionResult Plus(int cartId)
+		{
+			var stock = _unitOfWork.StockItem.GetFirstOrDefault(c => c.Id == cartId, includeProperties: "WareHouse,Employee");
+			stock.Count += 1;
+			_unitOfWork.Save();
+			return RedirectToAction(nameof(Details), new { id = stock.Id });
+		}
+
+		public IActionResult Minus(int cartId)
+		{
+			var stock = _unitOfWork.StockItem.GetFirstOrDefault(c => c.Id == cartId, includeProperties: "WareHouse,Employee");
+
+			if (stock.Count == 1 || stock.Count == 0)
+			{
+				stock.Count = 0;
+
+				_unitOfWork.Save();
+		
+			}
+			else
+			{
+
+				stock.Count -= 1;
+				
+				_unitOfWork.Save();
+			}
+
+			return RedirectToAction(nameof(Details), new { id = stock.Id });
+		}
 		public IActionResult Privacy()
 		{
 			return View();
